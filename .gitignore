@@ -58,3 +58,16 @@ sysinfo.txt
 # Crashlytics generated file
 crashlytics-build.properties
 
+# Jesus defined
+Assets/QuickStartMirror.meta
+Assets/Editor.meta
+Assets/Editor*
+Assets/ScriptTemplates*
+Assets/Editor/Profiler/
+Assets/Editor/ParrelSync/
+Assets/Mirror/Examples/
+ProjectSettings/
+UserSettings/
+Packages/
+.DS_Store
+.vsconfig
