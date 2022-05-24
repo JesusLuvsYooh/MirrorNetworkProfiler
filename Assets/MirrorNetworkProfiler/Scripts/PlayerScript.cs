@@ -4,7 +4,7 @@ using UnityEngine;
 using Mirror;
 using Unity.Profiling;
 
-public class PlayerNetworkRepeater : NetworkBehaviour
+public class PlayerScript : NetworkBehaviour
 {
     private int counter;
 
@@ -22,7 +22,7 @@ public class PlayerNetworkRepeater : NetworkBehaviour
     {
         if (isServer)
         {
-            GameStats.PlayerCount.Sample(NetworkManager.singleton.numPlayers);
+            NetworkStats.PlayerCount.Sample(NetworkManager.singleton.numPlayers);
         }
 
         if (isLocalPlayer)
@@ -40,7 +40,7 @@ public class PlayerNetworkRepeater : NetworkBehaviour
         counter += 1;
         print("Cmd");
         Rpc();
-        GameStats.CommandCount.Value += 1;
+        NetworkStats.CommandCount.Value += 1;
         
     }
 
@@ -48,7 +48,7 @@ public class PlayerNetworkRepeater : NetworkBehaviour
     public void Rpc()
     {
         print("Rpc");
-        GameStats.ClientRpcCount.Value += 1;
+        NetworkStats.ClientRpcCount.Value += 1;
     }
 
 }

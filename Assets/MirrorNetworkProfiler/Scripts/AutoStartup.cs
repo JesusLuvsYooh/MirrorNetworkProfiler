@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Mirror;
 
-public class StartupAutomater : MonoBehaviour
+public class AutoStartup : MonoBehaviour
 {
     // Start is called before the first frame update
     void Start()
